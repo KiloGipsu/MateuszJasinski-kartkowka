@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator</title>
+  </head>
+  <body>
+    <table>
+      <ul>
+        <li>
+          <a href="/"><h5>Strona główna</h5></a>
+        </li>
+        <li><a href="/kalkulator">Kalkulator</a></li>
+        <li><a href="/programowanie">Programowanie</a></li>
+        <li><a href="/tatry">Tatry</a></li>
+        <li><a href="/kontakt">Kontakt</a></li>
+      </ul>
+    </table>
+    <form>
+      Liczba: <input type="number" id="a" /> <br />
+      J:<input type="number" id="j" disabled /><br />
+      Kcal:<input type="number" id="kcal" disabled /><br />
+      <input type="button" value="przelicz" onclick="oblicz();" />
+    </form>
+    <script>
+      function oblicz() {
+        let a = parseInt(document.getElementById("a").value);
+        document.getElementById("j").value = a / 4184;
+        document.getElementById("kcal").value = a * 4184;
+      }
+    </script>
+  </body>
+</html>
